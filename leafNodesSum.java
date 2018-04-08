@@ -27,7 +27,7 @@ class MainClass {
 		root.right.right = new Node(7);
 		root.right.left.right = new Node(8);
 		root.right.right.right = new Node(9);
-		System.out.println("Sum of all leaf nodes is " + leftLeaveSum(root));
+		System.out.println("Sum of all leaf nodes is " + leftLeaveSum(root, 0));
 	}
 
 	/**
@@ -50,16 +50,12 @@ class MainClass {
 	 * @param node
 	 * @return
 	 */
-	private static int leftLeaveSum(Node node) {
-		int result = 0;
-
-		if (node != null) {
-			if (isLeaf(node.left))
-				result += node.left.data;
-			else
-				result += leftLeaveSum(node.left);
-			result += leftLeaveSum(node.right);
+	private static int leftLeaveSum(Node node,int result) {
+		if (isLeaf(node)) {
+			result += node.data;
 		}
-		return result;
+		leftLeaveSum(node.left, result);
+	        leftLeaveSum(node.right,result);
+	   return result;
 	}
 }

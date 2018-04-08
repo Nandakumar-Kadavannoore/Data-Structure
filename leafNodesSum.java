@@ -1,6 +1,6 @@
 /**
  * Sum of all leaf nodes of the Tree
- * @author Nandakumar K
+ * @author Nandakumar.K
  */
 package tree;
 

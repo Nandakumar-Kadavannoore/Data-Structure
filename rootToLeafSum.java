@@ -1,4 +1,7 @@
-package tree;
+/*
+ Find Sum from root to leaf
+ @author Nandakumar K
+*/
 
 class Node {
 	int data;

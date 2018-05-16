@@ -1,4 +1,7 @@
-package tree;
+/*
+Graph implemented as Adjacency linked List
+@author Nandakumar K
+*/
 
 import java.util.LinkedList;
 

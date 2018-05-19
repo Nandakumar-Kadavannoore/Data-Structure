@@ -40,5 +40,16 @@ class MainClass {
 		}
 	   return false;		
 	}
+	
+	void pritKDistant(Node node, int target) {
+		if (node == null)
+			return;
+		if (target == 0) {
+			System.out.println(node.data + " ");
+			return;
+		} 
+		printAncestors(node.left, target - 1);
+		printAncestors(node.right, target - 1);
+	}
   
   }

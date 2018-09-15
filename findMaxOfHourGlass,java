@@ -1,0 +1,20 @@
+private static int findMaxSum(int[][] matrix, int row, int column) {
+		
+		if (row < 3 || column < 3)
+			return -1;
+		
+		int maxSum = Integer.MIN_VALUE;
+		
+		for (int i = 0; i < row - 2;  i++) {
+			for (int j = 0; j < column - 2; j++) {
+				int sum = (matrix[i][j] + matrix[i][j+1] +
+						matrix[i][j+2] + matrix[i+1][j+1] +
+						matrix[i+2][j] + matrix[i+2][j+1] +
+						matrix[i+2][j+2]);
+				maxSum = Math.max(maxSum, sum);
+			}
+			
+		}
+		return maxSum;
+		
+	}

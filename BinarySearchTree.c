@@ -32,6 +32,7 @@ void insert(tree *root,tree *r1)
 
 void inorder( tree *root )
  {
+	
  	 if(root!=0)
  	  {
  	  	inorder(root->l);

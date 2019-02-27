@@ -4,7 +4,8 @@
         int count = 0; 
   
         // iterate for all 
-        // triples pairs (i, j, l) 
+        // triples pairs (i, j, l)
+       // all value
         for (i = 1; i <= n; i++) { 
             for (j = 1; j <= n; j++) { 
                 for (l = 1; l <= n; l++) { 
